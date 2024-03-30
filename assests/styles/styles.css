@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+:root {
+    --black:#12202f;
+    --green:#12BA9C;
+    --orange:#FF5710;
+    --yellow:#FF9E1C;
+}
+body {
+    background: #ebe3cd;
+}
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+}
+.w92 {
+    width: 92%;
+}
+.fw900 {
+    font-weight: 900;
+}
+/* Font colors for text */
+.fontColorOrange {
+    color: var(--yellow);
+}
+.fontColorGreen {
+    color: var(--green);
+}
+/* Colors for Background  */
+.orange {
+    background: var(--orange);
+}
+.green {
+    background: var(--green);
+}
+.navContainer {
+    background-color: var(--black);
+}
+.signBtn{
+    color: var(--green); 
+    font-weight: 500;
+}
+.tagline {
+    font-size: 1.6rem;
+}
+.overView {
+    padding-bottom: 13.85rem;
+}
+.overViewImage {
+    width: 54rem;
+}
+.overViewImageContainer {
+    right: -2%;
+}
+.plantImage {
+    bottom: 2%;
+    left: 2%;
+    width: 9.4rem;
+}
+.window {
+    z-index: -1;
+    width: 9.8rem;
+    bottom: 45%;
+}
+.windowOne {
+    left: 30%;
+}
+.windowTwo {
+    right: 2.5%;
+}
+.bookingInput {
+    height:4.724rem;
+    border-radius: 28px;
+    border:1.5px solid #12202f;
+    outline: 0;
+    background:#ebe3cd;
+}
+.bookingInput::placeholder {
+    color: black;
+    font-weight: 600;
+}
+.avaibilityBtn {
+    background-color: var(--green);
+    font-weight: 500;
+}
+.foodImage {
+    height: 10.75rem;
+}
+.cardContent {
+    background: #faf8ef;
+}
+.covidImage {
+    height: 28rem;
+}
+.tableChair {
+    width: 21rem;
+    top: 50%;
+    z-index: -2;
+}
+.tableChairOne {
+    left: 4.5%;
+}
+.tableChairTwo {
+    right: 4%;
+}
