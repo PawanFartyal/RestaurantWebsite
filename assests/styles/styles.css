@@ -8,6 +8,8 @@
     --green:#12BA9C;
     --orange:#FF5710;
     --yellow:#FF9E1C;
+    --darkOrange:#F75C30;
+    --darkGreen:#3a3a3a;
 }
 body {
     background: #ebe3cd;
@@ -15,12 +17,30 @@ body {
 h1, h2, h3, h4 {
     font-family: "Playfair Display", serif;
 }
+a {
+    text-decoration: none;
+}
+.headingFontSize {
+    font-size: 2.8rem;
+}
+.lh-md {
+    line-height: 1.75;
+}
 .w92 {
     width: 92%;
+}
+.w85 {
+    width: 85%;
+}
+.w45 {
+    width: 45%;
 }
 .fw900 {
     font-weight: 900;
 }
+.text-justify {
+    text-align: justify;
+  }
 /* Font colors for text */
 .fontColorOrange {
     color: var(--yellow);
@@ -28,12 +48,34 @@ h1, h2, h3, h4 {
 .fontColorGreen {
     color: var(--green);
 }
+.fontColorYellow {
+    color: var(--yellow);
+}
+.fontColorDarkOrange {
+    color: var(--darkOrange);
+}
+.fontDarkGreen {
+    color: var(--darkGreen);
+}
 /* Colors for Background  */
 .orange {
     background: var(--orange);
 }
 .green {
     background: var(--green);
+}
+.whiteShade {
+    background: #faf8ef;
+}
+.creamColor {
+    background: #CCC1A3;
+}
+.yellow {
+    background: var(--yellow);
+}
+/* Drop shadow */
+.dropShadow {
+    filter: drop-shadow(-5.557px 5.755px 0px rgba(150,137,104,0.15));
 }
 .navContainer {
     background-color: var(--black);
@@ -104,4 +146,68 @@ h1, h2, h3, h4 {
 }
 .tableChairTwo {
     right: 4%;
+}
+.plant {
+    height: 9.5rem;
+}
+.drinks {
+    bottom: 98%;
+    width: 13.5rem;
+}
+.wordsChef {
+    border-radius: 50px;
+}
+.spoon {
+    top: 12%;
+    left: 43%;
+    height: 12rem;
+}
+.reviewCardContent > p{
+    font-size: .8rem;
+}
+.reviewCardContent .date {
+    color: #ccc1a3;
+    font-size: 14px;
+}
+.newsletterForm > input {
+    height: 4.85rem;
+    outline: none;
+}
+.newsletterForm > textarea {
+    height: 11rem;
+    outline: none;
+}
+.newsletterForm input::placeholder ,.newsletterForm textarea::placeholder {
+    color: #393939;
+    font-weight: 600;
+}
+.leafOne {
+    top: 11%;
+    left: 0%;
+}
+.lemon {
+    top: 5%;
+    right: 5%;
+}
+.avocado {
+    bottom: 6%;
+    left: 3%;
+}
+.leafTwo {
+    bottom: 5%;
+    right: 0%;
+}
+footer a {
+    color: #404040;
+}
+footer h2 {
+    color:#faf8ef;
+}
+footer input {
+    outline: none;
+    border: 3px solid #656565;
+    height: 3.5rem;
+}
+.socialIcon{
+    width: 2.75rem;
 }
