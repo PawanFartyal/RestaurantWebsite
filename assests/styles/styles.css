@@ -88,6 +88,10 @@ a {
 .yellow {
     background: var(--yellow);
 }
+.lightCreamColor {
+    background: #ebe3cd;
+}
+
 /* Drop shadow */
 .dropShadow {
     filter: drop-shadow(-5.557px 5.755px 0px rgba(150,137,104,0.15));
