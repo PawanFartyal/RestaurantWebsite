@@ -3,6 +3,9 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --black:#12202f;
     --green:#12BA9C;
@@ -13,6 +16,7 @@
 }
 body {
     background: #ebe3cd;
+    overflow-x: hidden;
 }
 h1, h2, h3, h4 {
     font-family: "Playfair Display", serif;
@@ -20,12 +24,13 @@ h1, h2, h3, h4 {
 a {
     text-decoration: none;
 }
-.headingFontSize {
-    font-size: 2.8rem;
-}
+
+/* Custom line height */
 .lh-md {
     line-height: 1.75;
 }
+
+/* Custom widths */
 .w92 {
     width: 92%;
 }
@@ -35,18 +40,27 @@ a {
 .w45 {
     width: 45%;
 }
+
+/* Custom font settings */
 .fw900 {
     font-weight: 900;
+}
+.headingSize {
+    font-size: 2.75rem;
 }
 .text-justify {
     text-align: justify;
   }
+
 /* Font colors for text */
 .fontColorOrange {
     color: var(--yellow);
 }
 .fontColorGreen {
     color: var(--green);
+}
+.fontColorCream {
+    color:  #ebe3cd;
 }
 .fontColorYellow {
     color: var(--yellow);
@@ -57,6 +71,7 @@ a {
 .fontDarkGreen {
     color: var(--darkGreen);
 }
+
 /* Colors for Background  */
 .orange {
     background: var(--orange);
@@ -77,8 +92,14 @@ a {
 .dropShadow {
     filter: drop-shadow(-5.557px 5.755px 0px rgba(150,137,104,0.15));
 }
+.lampImage {
+    right: 20%;
+    height: 17rem;
+}
+
+/* navbar */
 .navContainer {
-    background-color: var(--black);
+    background-color:#12202f;
 }
 .signBtn{
     color: var(--green); 
@@ -87,6 +108,8 @@ a {
 .tagline {
     font-size: 1.6rem;
 }
+
+/* Overview Section */
 .overView {
     padding-bottom: 13.85rem;
 }
@@ -112,12 +135,21 @@ a {
 .windowTwo {
     right: 2.5%;
 }
+
+/* Booking Section */
 .bookingInput {
-    height:4.724rem;
+    height:5rem;
+    width: 12rem;
     border-radius: 28px;
     border:1.5px solid #12202f;
     outline: 0;
     background:#ebe3cd;
+}
+.bookingInput[type="email"] {
+    width: 18.75rem;
+}
+.avaibilityBtn {
+    width: 13.5rem;
 }
 .bookingInput::placeholder {
     color: black;
@@ -132,6 +164,10 @@ a {
 }
 .cardContent {
     background: #faf8ef;
+    transition: transform .4s ease;
+}
+.cardContent > h3 {
+    font-size: 2.25rem;
 }
 .covidImage {
     height: 28rem;
@@ -162,6 +198,14 @@ a {
     left: 43%;
     height: 12rem;
 }
+.customer {
+    height: 9.5rem;
+}
+
+/* Review Cards */
+.reviewCard {
+    transition: transform .4s ease;
+}
 .reviewCardContent > p{
     font-size: .8rem;
 }
@@ -169,6 +213,8 @@ a {
     color: #ccc1a3;
     font-size: 14px;
 }
+
+/* Newsletter Section */
 .newsletterForm > input {
     height: 4.85rem;
     outline: none;
@@ -197,6 +243,8 @@ a {
     bottom: 5%;
     right: 0%;
 }
+
+/* Footer Section */
 footer a {
     color: #404040;
 }
@@ -210,4 +258,141 @@ footer input {
 }
 .socialIcon{
     width: 2.75rem;
+}
+
+/* changing crousal indicators */
+.carousel-indicators [data-bs-target] {
+    background: var(--orange);
+    background-clip: padding-box;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+.carousel-indicators {
+    bottom: -25%;
+}
+
+/* Transiton Effect */
+button {
+    transition: transform 500ms;
+}
+.hoverBtn:hover {
+   transform: translateY(-.5rem);
+   transition: transform 250ms;
+}
+.cardContent:hover, .reviewCard:hover, .navContainer a:hover {
+    transform: scale(1.1);
+}
+footer a:hover {
+    color:#ebe3cd;
+}
+
+ /* Animation start */
+.scrollWatcher {
+    height: 8px;
+    background: var(--darkOrange);
+    z-index: 1000;
+    width: 100%;
+    transform-origin: left;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+.fadeIn {
+    scale: .5;
+    opacity: .5;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+nav {
+    animation: fade-down .4s linear;
+}
+.rightFadeIn {
+    animation: fade-in-left .8s linear;
+}
+.leftFadeIn {
+    animation: fade-in-right 1s linear;
+}
+.scrollFadeRight {
+    animation: fade-in-left  linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+.scrollFadeLeft {
+    animation: scroll-fade-right linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+/* Animation Keyframes */
+
+/* Scroll Watcher */
+@keyframes scroll-watcher {
+     to {scale:1 1}
+}
+
+/* Fade in effect */
+@keyframes fade-in {
+    form{scale:.5; opacity: 0;}
+    to{scale:1; opacity:1;}
+}
+
+/* Fade down effect */
+@keyframes fade-down {
+    0%{ opacity: 0; transform: translateY(-200%) scale(0.9);}
+    100%{ opacity: 1; transform: translateY(0) scale(1);}
+}
+
+/* fade in from left effect */
+@keyframes fade-in-left {
+    0%{opacity: 0; transform: translateX(-100%) scale(0.5);}
+    100%{ opacity: 1; transform: translateX(0) scale(1);}
+}
+
+/* Fade in from right effect */
+@keyframes fade-in-right {
+    0%{opacity: 0; transform:scale(0.9);}
+    100%{ opacity: 1; transform: translateX(0) scale(1);}
+}
+
+/* Fade in when scroll form right */
+@keyframes scroll-fade-right {
+    0%{opacity: 0; transform:translateX(100%) scale(0.9);}
+    100%{ opacity: 1; transform: translateX(0) scale(1);}
+}
+
+/* Media Queries */
+
+/* Media Queries for tablet screen */
+@media (max-width:1200px) {
+    .mobileTextCenter {
+        text-align: center;
+    }
+    .overView {
+        padding-bottom: 1rem;
+    }
+    .w100 {
+        width: 100% !important;
+    }
+    .maxWidth {
+        max-width: 450px;
+    }
+}
+
+/* Media Queries for mobile screen */
+@media (max-width:578px) {
+    .w90 {
+        width: 90%;
+    } 
+    .covidImage {
+        object-fit: contain;
+        max-height: 250px;
+    }
+    .mobileTextJustify {
+        text-align: justify;
+    }
+    .carousel-indicators {
+        bottom: -10%;
+    }
 }
